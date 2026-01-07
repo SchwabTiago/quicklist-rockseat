@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
@@ -17,49 +17,61 @@
 </head>
 
 <body>
-    <header>
-        <div>
-            <img src="assets/image/logo.svg" alt="Logo">
-        </div>
-    </header>
-    <main>
-        <div>
-            <a>← Voltar</a>
-            <h1>Compras da semana</h1>
-        </div>
-        <form>
-            <input type="text" name="" id="" placeholder="Adicione um novo item">
-            <button>Adicionar item</button>
-        </form>
-        <div>
-            <div>
-                <input type="checkbox" name="" id="">
-                <p>Pão de forma</p>
-                <img src="./assets/image/trash_icon.svg" alt="">
+    <div class="main-container">
+        <header>
+            <div class="headder-container">
+                <img src="assets/image/logo.svg" alt="Logo">
             </div>
-            <div>
-                <input type="checkbox" name="" id="">
-                <p>Café preto</p>
-                <img src="./assets/image/trash_icon.svg" alt="">
+        </header>
+        <main>
+            <div class="title-container">
+                <a href="/">← Voltar</a>
+                <h1>Compras da semana</h1>
             </div>
-            <div>
-                <input type="checkbox" name="" id="">
-                <p>Suco de laranja</p>
-                <img src="./assets/image/trash_icon.svg" alt="">
+            <form class="form-container">
+                <input type="text" name="item" id="new-item" placeholder="Adicione um novo item" required>
+                <button>Adicionar item</button>
+            </form>
+            <div class="list-container">
+                <ul class="list">
+                    <li class="list-item">
+                        <label>
+                            <input type="checkbox">
+                            <span>Pão de forma</span>
+                        </label>
+                        <button><img src="./assets/image/trash_icon.svg"></button>
+                    </li>
+                    <li class="list-item">
+                        <label>
+                            <input type="checkbox">
+                            <span>Café preto</span>
+                        </label>
+                        <button><img src="./assets/image/trash_icon.svg"></button>
+                    </li>
+                    <li class="list-item">
+                        <label>
+                            <input type="checkbox">
+                            <span>Suco de laranja</span>
+                        </label>
+                        <button><img src="./assets/image/trash_icon.svg"></button>
+                    </li>
+                    <li class="list-item">
+                        <label>
+                            <input type="checkbox">
+                            <span>Bolacha</span>
+                        </label>
+                        <button><img src="./assets/image/trash_icon.svg"></button>
+                    </li>
+                </ul>
             </div>
-            <div>
-                <input type="checkbox" name="" id="">
-                <p>Bolacha</p>
-                <img src="./assets/image/trash_icon.svg" alt="">
-            </div>
-        </div>
 
-        <div>
-            <img src="./assets/image/waring_icon.svg" alt="">
-            <p>O item foi removido da lista</p>
-            <img src="./assets/image/delete_icon.svg" alt="">
-        </div>
-    </main>
+            <div id="remove-notification">
+                <img src="./assets/image/waring_icon.svg" alt="">
+                <span>O item foi removido da lista</span>
+            </div>
+        </main>
+    </div>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

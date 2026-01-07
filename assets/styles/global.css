@@ -10,5 +10,12 @@
     --always-white: #FFFFFF;
     --border-primary: #D1D5DB;
     --border-hover: #B9C2D0;
+}
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
