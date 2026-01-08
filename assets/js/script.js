@@ -1,9 +1,18 @@
 let inputNewItem = document.getElementById("new-item")
 let form = document.querySelector("form")
 let ul = document.querySelector(".list")
+let notification = document.getElementById("remove-notification")
+
+function showNotification() {
+    notification.classList.add("show")
+
+    setTimeout(() => {
+        notification.classList.remove("show")
+    }, 2000)
+}
 
 function newChildren() {
-    const value = inputNewItem.value.trim()
+    const value = inputNewItem.value
     if (!value) return
 
     const li = document.createElement("li")
@@ -29,7 +38,10 @@ function newChildren() {
     li.appendChild(label)
     li.appendChild(button)
 
-    button.addEventListener("click", () => li.remove())
+    button.addEventListener("click", () => {
+        li.remove()
+        showNotification()
+    })
 
     ul.appendChild(li)
     inputNewItem.value = ""
